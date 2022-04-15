@@ -19,7 +19,7 @@ module Pod
         puts "\n#{question}?"
 
         @message_bank.show_prompt
-        answer = gets.chomp
+        answer = STDIN.gets.chomp
 
         break if answer.length > 0
 
