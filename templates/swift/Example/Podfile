@@ -1,6 +1,11 @@
-use_frameworks!
+plugin 'cocoapods-dev-env'
+use_frameworks! :linkage => :static
 
-platform :ios, '9.0'
+platform :ios, '11.0'
+
+source 'git@gitlab.corp.youdao.com:luna-ios-framework/youdaospecrepository.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
