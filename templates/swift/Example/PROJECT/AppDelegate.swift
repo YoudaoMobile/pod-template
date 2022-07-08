@@ -10,7 +10,7 @@ import UIKit
 import YDCommon
 import YDPlugin
 
-@UIApplicationMain
+@main
 class AppDelegate: YDApplicationDelegateDispatcher {
     var window: UIWindow? = UIWindow()
 
