@@ -11,7 +11,8 @@ target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
   
   pod 'YDCommon/YDDebug', :dev_env => 'parent'
-  pod 'YDPlugin', :dev_env => 'parent'
+  pod 'YDPlugin/Dict', :dev_env => 'parent'
+
   # 如果使用了登录功能，需要打开下边的库，否则手机号登录部分会报assert导致崩溃
   # pod 'NELoginEngine/Fake' , :dev_env => 'parent'
 
@@ -25,6 +26,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
+      config.build_settings["DEVELOPMENT_TEAM"] = "HUW3H8NBU9"
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
       config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
         if config.name == 'Release'
