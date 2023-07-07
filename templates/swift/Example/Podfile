@@ -11,6 +11,7 @@ target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
   
   pod 'YDCommon/YDDebug', :dev_env => 'parent'
+  pod 'YDCommon/YDMedia', :dev_env => 'parent' 
   pod 'YDPlugin', :dev_env => 'parent'
   # 如果使用了登录功能，需要打开下边的库，否则手机号登录部分会报assert导致崩溃
   # pod 'NELoginEngine/Fake' , :dev_env => 'parent'
