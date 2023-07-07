@@ -25,6 +25,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
+      config.build_settings["DEVELOPMENT_TEAM"] = "HUW3H8NBU9"
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
       config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
         if config.name == 'Release'
